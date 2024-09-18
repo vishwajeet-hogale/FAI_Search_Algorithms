@@ -24,7 +24,6 @@ class TraversalAlgorithms :
         queue = []
         queue.append([i,[]])
         while len(queue) :
-            # print(queue)
             temp = queue.pop(0)
             current,path = temp[0], temp[1]
             new_path = path + [current]
@@ -74,7 +73,7 @@ class TraversalAlgorithms :
 
 if __name__ == "__main__":
 
-    graph = generate(100)
+    graph = generate(20)
     visualize_graph(graph)
     # DFS Test 
     dfs = TraversalAlgorithms()
