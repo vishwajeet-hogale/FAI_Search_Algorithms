@@ -31,8 +31,8 @@ def a_star(graph,st_x,st_y,goal_x,goal_y):
             neighbors = [(0,1),(0,-1),(1,0),(-1,0)]
             for c1,c2 in neighbors:
                 new_coordinate = [current_node[0] + c1*graph[current_node[0]][current_node[1]],current_node[1] + c2*graph[current_node[0]][current_node[1]]]
-                if new_coordinate == [goal_x,goal_y]:
-                    return path_embedded + [return_matrix_mapping(goal_x,goal_y)]
+                # if new_coordinate == [goal_x,goal_y]:
+                #     return path_embedded + [return_matrix_mapping(goal_x,goal_y)]
                 if 0 <= new_coordinate[0] <= 3 and 0 <= new_coordinate[1] <= 3 :
                     g = cost + 1 + graph[current_node[0]][current_node[1]] # Doubt
                     print(return_matrix_mapping(new_coordinate[0],new_coordinate[1]), " : weight + cost = ", g)
